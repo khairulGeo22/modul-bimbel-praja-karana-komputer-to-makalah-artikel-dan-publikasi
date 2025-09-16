@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Bimbel Praja Karana: Solusi lengkap bimbingan komputer, akademik, desain grafis, hingga publikasi ilmiah. Dibimbing langsung oleh tutor ahli, M. Khairul.">
-    <meta name="keywords" content="Bimbel Komputer Basic, Bimbingan Skripsi, Desain Grafis Canva, Penulisan Ilmiah, M. Khairul">
+    <meta name="description" content="Bimbel Praja Karana: Solusi lengkap bimbingan komputer, akademik, desain grafis, hingga publikasi ilmiah. Dibimbing langsung oleh tutor ahli, M. Khairul,S.Pd, M.Pd.">
+    <meta name="keywords" content="Bimbel Komputer Basic, Bimbingan Skripsi, Desain Grafis Canva, Penulisan Ilmiah, M. Khairul, S.Pd, M.Pd">
     <title>Bimbel Praja Karana - Kursus Komputer Basic, Akademik & Skill Digital Academic</title>
     
      <link rel="icon" type="image/png" sizes="32x32" href="povicon.png">
@@ -258,7 +258,7 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Tingkatkan Skill Digital & Akademik Anda Hari Ini</h1>
+            <h1 id="typing-hero"></h1>
             <p>Dari Microsoft Office hingga konstruk artikel dan publikasi ilmiah, kami siapkan Anda untuk sukses di dunia akademik dan profesional.</p>
             <a href="#paket" class="btn btn-primary">Lihat Semua Paket</a>
         </div>
@@ -390,10 +390,26 @@
             }, { threshold: 0.1 });
 
             revealElements.forEach(el => revealObserver.observe(el));
+            // --- Logika untuk Efek Teks Mengetik ---
+            const textToType = "Tingkatkan Skill Digital & Akademik Anda Hari Ini";
+            const typingElement = document.getElementById('typing-hero');
+            let i = 0;
+
+            function typeWriter() {
+                if (i < textToType.length) {
+                    typingElement.innerHTML += textToType.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 70); // Kecepatan mengetik (ms)
+                }
+            }
+            // Panggil fungsi setelah halaman dimuat
+            typeWriter();
         });
     </script>
+
 </body>
 </html>
+
 
 
 
