@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bimbel Praja Karana: Solusi lengkap bimbingan komputer, akademik, desain grafis, hingga publikasi ilmiah. Dibimbing langsung oleh tutor ahli, M. Khairul.">
+    <meta name="keywords" content="Bimbel Komputer, Bimbingan Skripsi, Desain Grafis Canva, Penulisan Ilmiah, M. Khairul">
+    <title>Bimbel Praja Karana - Kursus Komputer, Akademik & Skill Digital Academic</title>
+    
+     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <meta property="og:title" content="Bimbel Praja Karana - Kursus Komputer & Akademik">
+    <meta property="og:description" content="Solusi lengkap bimbingan komputer, akademik, olah data SPSS, desain grafis, hingga publikasi ilmiah. Dibimbing langsung oleh tutor ahli.">
+    <meta property="og:image" content="preview-image.png">
+    <meta property="og:url" content="https://www.namawebsiteanda.com">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-light: #f1f5f9;
+            --text-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-secondary: #64748b;
+            --accent1: #3b82f6;
+            --accent2: #8b5cf6;
+            --accent3: #14b8a6;
+            --white: #ffffff;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Latar Belakang Animasi */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, var(--accent1), var(--bg-dark) 50%, var(--accent2));
+            background-size: 300% 300%;
+            animation: gradient-animation 15s ease infinite;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo { font-weight: 800; font-size: 1.5rem; color: var(--white); text-decoration: none; }
+        .nav-logo span { color: var(--accent1); }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-weight: 600; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--accent1); }
+        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex; align-items: center; text-align: center;
+            padding-top: 80px;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem; font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(90deg, var(--white), #a7c5f8);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            margin-bottom: 1rem;
+        }
+        .hero-content p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 2rem; }
+        
+        /* Tombol */
+        .btn { padding: 0.8rem 1.8rem; border-radius: 50px; border: none; cursor: pointer; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease; text-align: center; }
+        .btn-primary { background: var(--accent1); color: var(--white); box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4); }
+        .btn-primary:hover { background: #60a5fa; transform: translateY(-3px); box-shadow: 0 7px 25px rgba(59, 130, 246, 0.5); }
+        .btn-secondary { border: 2px solid var(--border-color); background: transparent; color: var(--white); }
+        .btn-secondary:hover { background: var(--accent1); border-color: var(--accent1); }
+        
+        /* Section Umum */
+        section { padding: 5rem 0; }
+        section h2 { text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem; }
+        
+        /* Kartu Paket */
+        .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .package-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem; border-radius: 1rem;
+            display: flex; flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative; overflow: hidden;
+        }
+        .package-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .package-tag {
+            position: absolute; top: 15px; right: -30px;
+            background: var(--accent3); color: var(--white);
+            padding: 4px 30px; font-size: 0.8rem; font-weight: 700;
+            transform: rotate(45deg);
+        }
+        .package-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--white); }
+        .package-card .summary { font-size: 0.9rem; color: #94a3b8; margin-top: 0.5rem; flex-grow: 1; }
+        .package-card .price { font-size: 2rem; font-weight: 800; color: var(--accent1); margin-top: 1.5rem; }
+        .package-card .price span { font-size: 1rem; font-weight: 600; color: #94a3b8; }
+        .package-card .actions { margin-top: 1.5rem; display: flex; gap: 0.5rem; }
+        
+        /* Bagian Keunggulan */
+        .feature-item { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+        .feature-item:nth-child(even) { flex-direction: row-reverse; }
+        .feature-text { flex: 1; }
+        .feature-text i { font-size: 2rem; color: var(--accent3); margin-bottom: 1rem; }
+        .feature-text h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .feature-text p { color: #94a3b8; }
+        .feature-image { flex: 1; }
+        .feature-image img { width: 100%; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        /* Accordion */
+        .accordion-container { max-width: 800px; margin: auto; }
+        .accordion-item { border: 1px solid var(--border-color); border-radius: 0.5rem; margin-bottom: 0.75rem; background: rgba(30, 41, 59, 0.5); }
+        .accordion-header { width: 100%; background: none; border: none; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1rem; color: var(--white); }
+        .accordion-header .chevron { transition: transform 0.3s ease; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+        .accordion-content-inner { padding: 0 1.5rem 1.5rem; font-size: 0.9rem; color: #94a3b8; }
+        .accordion-content-inner ol { list-style-position: inside; }
+        .accordion-content-inner li { margin-bottom: 0.5rem; }
+        .accordion-item.active .accordion-content { max-height: 500px; }
+        .accordion-item.active .chevron { transform: rotate(180deg); }
+        
+        /* Tombol WhatsApp Mengambang */
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px;
+            background-color: #25D366; color: var(--white);
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 999; transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Footer */
+        footer { text-align: center; padding: 3rem 0; margin-top: 3rem; background: var(--bg-dark); border-top: 1px solid var(--border-color); }
+        footer p { color: var(--text-secondary); font-size: 0.9rem; }
+        
+        /* Animasi Scroll Reveal */
+        .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Bagian Mitra Kolaborasi */
+        .mitra-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: -2rem auto 3rem;
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        .mitra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .mitra-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .mitra-card:hover {
+            transform: translateY(-10px);
+            background: rgba(59, 130, 246, 0.2);
+        }
+        .mitra-card i {
+            font-size: 2.5rem;
+            color: var(--accent3);
+            margin-bottom: 1rem;
+        }
+        .mitra-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+            color: var(--white);
+        }
+        .mitra-card p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Responsif untuk Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; position: absolute;
+                top: 70px; right: 0;
+                background: var(--bg-dark);
+                width: 100%;
+                flex-direction: column; text-align: center;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .nav-links li { padding: 1rem 0; border-top: 1px solid var(--border-color); }
+            .hamburger { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1rem; }
+            section { padding: 3rem 0; }
+            section h2 { font-size: 2rem; }
+            .feature-item, .feature-item:nth-child(even) { flex-direction: column; }
+            .feature-item { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-logo">Praja<span>Karana</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#paket">Paket Belajar</a></li>
+            <li><a href="#keunggulan">Keunggulan</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+    
+    <a href="https://wa.me/6285262608383?text=Halo,%20saya%20tertarik%20dengan%20program%20Bimbel%20Praja%20Karana." target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Tingkatkan Skill Digital & Akademik Anda Hari Ini</h1>
+            <p>Dari Microsoft Office hingga konstruk artikel dan publikasi ilmiah, kami siapkan Anda untuk sukses di dunia akademik dan profesional.</p>
+            <a href="#paket" class="btn btn-primary">Lihat Semua Paket</a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section id="paket">
+            <h2 class="reveal">Paket Belajar Terlengkap</h2>
+            <div class="packages-grid">
+                <div class="package-card reveal"><div class="package-tag">Populer</div><h3>Basic 1 & 2 (Komputer Dasar)</h3><p class="summary">Kuasai fundamental Microsoft Word, Excel, & PowerPoint. Cocok untuk pemula, pelajar, dan umum.</p><div class="price">Mulai Rp 75.000<span>/sesi</span></div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20Basic%20Komputer." class="btn btn-primary">Daftar</a></div></div>
+                <div class="package-card reveal"><div class="package-tag">Skripsi</div><h3>Advanced (Artikel Ilmiah)</h3><p class="summary">Belajar menulis artikel berstandar IMRAD, sitasi otomatis dengan Mendeley/Zotero, hingga siap submit.</p><div class="price">Rp 125.000<span>/sesi</span></div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20Advanced%20Artikel%20Ilmiah." class="btn btn-primary">Daftar</a></div></div>
+                <div class="package-card reveal"><h3>Olah Data (SPSS & Excel)</h3><p class="summary">Mahir dalam analisis statistik deskriptif, uji validitas, reliabilitas, dan regresi untuk kebutuhan skripsi/tesis.</p><div class="price">Rp 150.000<span>/sesi</span></div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20Olah%20Data%20SPSS." class="btn btn-primary">Daftar</a></div></div>
+                <div class="package-card reveal"><div class="package-tag">Baru</div><h3>Desain Grafis (Canva)</h3><p class="summary">Membuat presentasi, CV, poster, dan konten media sosial yang profesional dan menarik menggunakan Canva.</p><div class="price">Rp 100.000<span>/sesi</span></div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20Desain%20Grafis%20Canva." class="btn btn-primary">Daftar</a></div></div>
+                <div class="package-card reveal"><h3>Paket Publikasi Jurnal</h3><p class="summary">Bimbingan intensif mulai dari pemilihan jurnal, proses submit, menghadapi revisi, hingga artikel terbit.</p><div class="price">Rp 150.000<span>/sesi</span></div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20Publikasi%20Jurnal." class="btn btn-primary">Daftar</a></div></div>
+                <div class="package-card reveal"><h3>Paket koversi skripsi ke artikel</h3><p class="summary">Bimbingan intensif konversi skripsi pasca sempro, konversi ke bentuk artikel, proses submit, menghadapi revisi, hingga artikel terbit.</p><div class="price">Rp 150.000<span>/sesi</span></div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20konversi%20skripsi%20ke%20artikel." class="btn btn-primary">Daftar</a></div></div>
+                <div class="package-card reveal"><h3>Bimbingan Skripsi/Tesis</h3><p class="summary">Paket komprehensif dari penentuan judul, penyusunan bab 1-5, hingga persiapan sidang akhir.</p><div class="price">Hubungi Kami</div><div class="actions"><a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20tanya%20paket%20Bimbingan%20Skripsi/Tesis." class="btn btn-primary">Konsultasi</a></div></div>
+            </div>
+        </section>
+
+        <section id="keunggulan">
+            <h2 class="reveal">Kenapa Belajar di Praja Karana?</h2>
+            <div class="feature-item reveal">
+                <div class="feature-text">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Pembelajaran 1-on-1</h3>
+                    <p>Fokus penuh pada kebutuhan Anda. Materi dan kecepatan belajar disesuaikan total dengan kemampuan dan target pribadi Anda, bukan sistem kelas.</p>
+                </div>
+                <div class="feature-image"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1170&auto=format&fit=crop" alt="Diskusi Personal"></div>
+            </div>
+            <div class="feature-item reveal">
+                <div class="feature-text">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Tutor Praktisi, Bukan Teoritis</h3>
+                    <p>Dibimbing langsung oleh M. Khairul, seorang praktisi yang aktif dalam riset dan publikasi. Anda belajar dari pengalaman nyata, bukan sekadar teori buku.</p>
+                </div>
+                <div class="feature-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1170&auto=format&fit=crop" alt="Tutor Berpengalaman"></div>
+            </div>
+        </section>
+        
+        <section id="mitra">
+            <h2 class="reveal">Mitra Kolaborasi Kami</h2>
+            <p class="mitra-subtitle reveal">
+                Kami bekerja sama dengan jaringan bantuan akademik terpercaya untuk memastikan semua kebutuhan Anda terpenuhi. Mulai dari pengumpulan referensi, pembuatan akun Google Scholar, hingga penugasan ilmiah yang lebih kompleks.
+            </p>
+            <div class="mitra-grid">
+                <a href="https://www.simpulacademy.com/" target="_blank" rel="noopener noreferrer" class="mitra-card reveal">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Simpul Academy</h3>
+                    <p>simpulacademy.com</p>
+                </a>
+                <a href="https://www.bantunulis.web.id/" target="_blank" rel="noopener noreferrer" class="mitra-card reveal">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3>Bantu Nulis</h3>
+                    <p>bantunulis.web.id</p>
+                </a>
+                <a href="https://jasa-penulisan-akademik.vercel.app/" target="_blank" rel="noopener noreferrer" class="mitra-card reveal">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Jasa Penulisan Akademik</h3>
+                    <p>jasa-penulisan-akademik</p>
+                </a>
+                <a href="https://produk-artikel-dan-author-slot-cont.vercel.app/" target="_blank" rel="noopener noreferrer" class="mitra-card reveal">
+                    <i class="fas fa-feather-alt"></i>
+                    <h3>Produk Artikel & Author</h3>
+                    <p>produk-artikel-dan-author</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="reveal">Tanya Jawab (FAQ)</h2>
+            <div class="accordion-container reveal">
+                <div class="accordion-item"><button class="accordion-header"><span>Bagaimana sistem pembelajarannya?</span><span class="chevron">▼</span></button><div class="accordion-content"><div class="accordion-content-inner">Pembelajaran dilakukan secara privat (1-on-1) on site langsung kerumah atau melalui Google Meet atau Zoom. Anda akan mendapatkan modul, rekaman sesi (jika diperlukan), dan bimbingan praktik langsung.</div></div></div>
+                <div class="accordion-item"><button class="accordion-header"><span>Apakah jadwalnya fleksibel?</span><span class="chevron">▼</span></button><div class="accordion-content"><div class="accordion-content-inner">Sangat fleksibel. Jadwal akan kita diskusikan dan sepakati bersama sesuai ketersediaan waktu Anda dan tutor.</div></div></div>
+                <div class="accordion-item"><button class="accordion-header"><span>Metode pembayaran apa saja yang diterima?</span><span class="chevron">▼</span></button><div class="accordion-content"><div class="accordion-content-inner">Kami menerima pembayaran per pertemuan atau paket penuh melalui Transfer Bank (BCA, Mandiri) dan E-Wallet (GoPay, OVO, DANA).</div></div></div>
+                <div class="accordion-item"><button class="accordion-header"><span>Apakah ada jaminan sampai bisa?</span><span class="chevron">▼</span></button><div class="accordion-content"><div class="accordion-content-inner">Kami menjamin bimbingan yang berkualitas dan dukungan penuh. Keberhasilan sangat bergantung pada komitmen dan latihan Anda, namun kami akan mendampingi Anda di setiap langkah.</div></div></div>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <div class="hero-content reveal">
+                <h2>Masih Ragu? Konsultasi Gratis Dulu!</h2>
+                <p>Diskusikan kebutuhan Anda langsung dengan tutor kami, M. Khairul, tanpa biaya. Kami akan bantu rekomendasikan program yang paling tepat untuk Anda.</p>
+                <a href="https://wa.me/6285262608383?text=Halo,%20saya%20mau%20konsultasi%20gratis%20tentang%20program%20Bimbel%20Praja%20Karana." class="btn btn-primary"><i class="fab fa-whatsapp"></i> Hubungi via WhatsApp</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 CV Simpul Project Academy — Bimbel Praja Karana</p>
+        <p>Email: m.khairul311089@gmail.com · WA: 0852-6260-8383</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Logika untuk Hamburger Menu di Mobile
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
+                });
+            });
+
+            // Logika untuk semua Accordion
+            const allAccordions = document.querySelectorAll('.accordion-item');
+            allAccordions.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    // Menutup semua accordion lain sebelum membuka yang ini (opsional)
+                    // allAccordions.forEach(otherItem => {
+                    //     if (otherItem !== item) otherItem.classList.remove('active');
+                    // });
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Logika untuk Animasi Scroll Reveal
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
